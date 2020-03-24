@@ -4,7 +4,6 @@ const simulationDiv = document.querySelector('#simulation');
 const monthText = document.querySelector('#month');
 const screamText = document.querySelector('#scream');
 const screamAudio = document.querySelector('audio');
-const fireGif = document.querySelector('#fire');
 const audioDuration = (screamAudio.duration - 1) * 1000;
 const monthDuration = audioDuration / 12;
 const introHeading = document.querySelector('#intro');
@@ -36,7 +35,6 @@ startButton.onclick = e => {
 function startSimulation() {
     startAudio();
     changeText(1);
-    fireGif.classList.add('show');
     mainDiv.classList.add('shake');
 }
 function changeText(index) {
@@ -46,7 +44,6 @@ function changeText(index) {
         index++;
         if (index >= 12) {
             monthText.classList.add('hide');
-            fireGif.classList.add('hide');
             //test
         }
     }, monthDuration);
