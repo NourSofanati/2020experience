@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2020 Simulator - A realistic simulation of the year 2020.</title>
+    <link rel="preload" href="sound.mp3" as="audio" type="audio/mp3">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <audio src="sound.mp3" id="#audio"></audio>
+    <main>
+        <h1 id="intro">
+            Hello, and welcome to the 2020 experience.
+            Please click on the button bellow to start your simulation.
+        </h1>
+        <button id="startButton">Start simulation</button>
+        <div id="simulation" class="hidden">
+            <h1 id="month">January</h1>
+            <h3 id="scream"></h3>
+        </div>
+    </main>
+    <img src="transparent-fire-gif.gif" id="fire">
+    <script src="app.js"></script>
+</body>
+</html>
