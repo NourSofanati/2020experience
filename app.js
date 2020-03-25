@@ -34,16 +34,19 @@ startButton.onclick = e => {
 };
 function startSimulation() {
     startAudio();
-    changeText(1);
+    changeText();
     mainDiv.classList.add('shake');
 }
-function changeText(index) {
+function changeText() {
+    let index = 1;
     screamText.classList.add('textAnimation');
-    setInterval(() => {
+    let monthUpdate = setInterval(() => {
         monthText.textContent = months[index];
         index++;
+        console.log(index);
         if (index >= 12) {
             monthText.classList.add('hide');
+            clearInterval(monthUpdate);
             //test
         }
     }, monthDuration);
